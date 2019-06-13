@@ -16,7 +16,7 @@ module Rich
         validates :rich_file_file_name,
           :presence => true,
           :file_size => {
-            :maximum => 15.megabytes.to_i
+            :maximum => 100.megabytes.to_i
           }
 
         after_save :clear_uri_cache
